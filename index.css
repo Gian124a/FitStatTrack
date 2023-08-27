@@ -281,7 +281,7 @@ nav ul a:hover, .Menu ul a:hover{
     width: 100%;
     height: 125.7em;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 100%;
     grid-template-rows: 450px 420px 500px 400px 250px;
 }
 .Contenedor_Mayor-Info section:nth-child(1){
