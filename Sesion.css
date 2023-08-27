@@ -1,0 +1,226 @@
+:root{
+    --ColorAzulOscuro: #0643BD;
+    --ColorAzulCLaro: #12A9DB;
+    --ColorAzulTurquesa: #07E8C0;
+    --TipografiaTitulo: 'Audiowide';
+    --TipografiaSlogan:  'Montserrat', sans-serif;
+    --TipoGrafiaGeneral: 'Ubuntu Condensed', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo-Imagen{
+    display: none;
+}
+.Contendor-Sesion{
+    position: relative;
+    top: 100px;
+    padding: 10px 20px 20px 20px;
+    width: 400px;
+    border-radius: 10px;
+    height: 32em;
+    background-color: #FFFFFF;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 70px 70px 30px 80px 80px 70px;
+    row-gap: 5px;
+}
+.Contendor-Sesion::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0643BD;
+    z-index: -1;
+    border-radius: 10px;
+    filter: blur(8px);
+    background-size: 100%;
+}
+.Sesion:nth-child(1){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid var(--ColorAzulOscuro);
+    font-family: var(--TipoGrafiaGeneral);
+    font-size: 23px;
+    margin: 0 20px;
+}
+.Sesion:nth-child(2){
+    position: relative;
+}
+.Contenedor-Input{
+    position: absolute;
+    width: 100%;
+    height: 45px;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.Contenedor-Input input{
+    position: absolute;
+    width: 90%;
+    height: 100%;
+    border: none;
+    border-bottom: 3px solid #0643BD;
+    outline: none;
+    padding: 0 15px;
+    background-color: transparent;
+}
+.Contenedor-Input input:focus~label{
+    top: -15px;
+    color: #000000;
+    transition: .5s;
+}
+.Contenedor-Input label{
+    position: absolute;
+    left: 18px;
+    top: 14px;
+    font-family: var(--TipoGrafiaGeneral);
+    font-size: 17px;
+    pointer-events: none;
+    color: #7d7474;
+    transition: .5s;
+}
+.Sesion:nth-child(3){
+    position: relative;
+}
+.Sesion:nth-child(4){
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-left: 15px;
+}
+.Sesion:nth-child(4) a{
+    color: var(--ColorAzulOscuro);
+    font-weight: 600;
+    font-family: var(--TipoGrafiaGeneral);
+    transition: .5s;
+}
+.Sesion:nth-child(4) a:hover{
+    color: #163677;
+    text-decoration: underline;
+    transition: .5s;
+}
+.Sesion:nth-child(5), .Sesion:nth-child(6){
+    position: relative;
+}
+.Contenedor-Redes{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 80%;
+    height: 50px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 10px gray;
+    font-family: var(--TipoGrafiaGeneral);
+    font-weight: 600;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-left: 35px;
+    cursor: pointer;
+    transition: .5s;
+}
+.Contenedor-Redes:hover{
+    box-shadow: 0px 0px 10px #0643BD;
+    transition: .5s;
+}
+.imagen-red{
+    position: relative;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    margin-right: 10px;
+    overflow: hidden;
+}
+.imagen-red:nth-child(1) .logo{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 165%;
+    height: 165%;
+    margin-right: -12px;
+}
+.imagen-red img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-size: 100%;
+    object-fit: cover;
+
+}
+.Sesion:nth-child(7){
+    position: relative;
+}
+button{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: #FFFFFF;
+    width: 81%;
+    height: 50px;
+    border: 4px solid #0643BD;
+    color: #0643BD;
+    font-family: var(--TipoGrafiaGeneral);
+    font-size: 22px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .5s;
+}
+button:hover{
+    background-color: #0643BD;
+    color: #FFFFFF;
+    border: 4px solid #FFFFFF;
+    transition: .5s;
+}
+
+@media (min-width: 1110px){
+
+    .Contendor-Sesion{
+        top: 0;
+    }
+    .Contenedor-Mayor{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        width: 90%;
+        height: 90%;
+        border: 5px solid #0643BD;
+        background-color: #FFFFFF;
+        border-radius: 10px;
+        z-index: -1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 90px;
+    }
+    .Contenedor-Mayor .logo-Imagen{
+        width: 300px;
+    
+    }
+}
